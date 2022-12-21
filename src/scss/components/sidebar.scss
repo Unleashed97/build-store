@@ -1,0 +1,13 @@
+.sidebar {
+    width: 256px;
+    height: 100vh;
+
+    padding: 35px 8px;
+
+    border-right: 1px solid rgba(#000, 0.12);
+
+    &__logo {
+        display: block;
+        margin: 0 auto 40px;
+    }
+}

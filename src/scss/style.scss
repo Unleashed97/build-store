@@ -18,9 +18,12 @@ html {
 }
 
 body {
+    margin: 0;
+
     font-family: $family;
     font-size: 1.6rem;
     font-weight: 500;
+    color: $colors-text;
 }
 
 ul {
@@ -44,6 +47,16 @@ p {
     margin: 0;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-areas: 'sidebar main';
+    grid-template-columns: 256px 1fr;
+}
+
 // components
 @import 'components/header.scss';
 @import 'components/footer.scss';
+@import 'components/container.scss';
+@import 'components/sidebar.scss';
+@import 'components/main.scss';
+@import 'components/nav.scss';
