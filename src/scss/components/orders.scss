@@ -1,0 +1,67 @@
+.orders {
+    &__item {
+        padding-bottom: 7px;
+        margin-bottom: 7px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #eeeded;
+
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    &__name {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.45;
+        color: $colors-text-title;
+    }
+
+    &__from,
+    &__date {
+        font-size: 1.2rem;
+        line-height: 1.45;
+        color: #7d7d7d;
+    }
+
+    &__price {
+        line-height: 1.45;
+        color: $colors-text-title;
+    }
+
+    &__state {
+        padding: 5px 10px;
+
+        font-size: 1.2rem;
+        line-height: 1.45;
+        white-space: nowrap;
+        color: $colors-text;
+
+        border-radius: 10px;
+
+        &--pending {
+            background-color: $colors-pending;
+        }
+
+        &--completed {
+            background-color: $colors-completed;
+        }
+        &--sorting {
+            background-color: $colors-sorting;
+        }
+        &--shipped {
+            background-color: $colors-shipped;
+        }
+    }
+}

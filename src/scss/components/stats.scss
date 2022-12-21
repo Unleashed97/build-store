@@ -1,0 +1,32 @@
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+    &__total-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__total {
+        font-size: 3.4rem;
+        line-height: 1.23;
+    }
+
+    &__total-diff {
+        font-size: 1.2rem;
+        line-height: 1.46;
+        color: #1db710;
+    }
+
+    &__percent {
+        padding: 7px 10px;
+
+        font-size: 1.3rem;
+        color: #ff7d1f;
+
+        border-radius: 16px;
+        background-color: $colors-bg-highlight;
+    }
+}

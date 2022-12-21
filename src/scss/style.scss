@@ -22,7 +22,6 @@ body {
 
     font-family: $family;
     font-size: 1.6rem;
-    font-weight: 500;
     color: $colors-text;
 }
 
@@ -49,8 +48,16 @@ p {
 
 .wrapper {
     display: grid;
-    grid-template-areas: 'sidebar main';
+    grid-template-areas: 'sidebar content';
     grid-template-columns: 256px 1fr;
+}
+
+.content {
+    grid-area: content;
+
+    padding: 20px 30px 30px;
+
+    background-color: $colors-bg;
 }
 
 // components
@@ -60,3 +67,10 @@ p {
 @import 'components/sidebar.scss';
 @import 'components/main.scss';
 @import 'components/nav.scss';
+@import 'components/user-menu.scss';
+@import 'components/section.scss';
+@import 'components/orders.scss';
+@import 'components/stats.scss';
+@import 'components/dropdown.scss';
+@import 'components/btn.scss';
+@import 'components/form.scss';

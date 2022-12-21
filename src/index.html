@@ -12,8 +12,191 @@
             <!-- sidebar include -->
             @@include('html/partials/sidebar.html')
 
-            <!-- main -->
-            <main class="main"></main>
+            <div class="content">
+                <!-- sidebar include -->
+                @@include('html/partials/header.html')
+
+                <!-- main -->
+                <main class="main">
+                    <section class="section section--v1">
+                        <h1 class="section__title">Главная</h1>
+                        <div class="section__content">
+                            <div class="section__info-block">
+                                <section class="section--v3">
+                                    <h3 class="section__title">Продано товаров</h3>
+                                    <div class="section__content">
+                                        <div class="stats">
+                                            <div class="stats__total-wrapper">
+                                                <span class="stats__total">1462</span>
+                                                <span class="stats__total-diff">+10 за день</span>
+                                            </div>
+                                            <span class="stats__percent">+24%</span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section--v3">
+                                    <h3 class="section__title">Сегодняшний доход</h3>
+                                    <div class="section__content">
+                                        <div class="stats">
+                                            <div class="stats__total-wrapper">
+                                                <span class="stats__total">₽25 532</span>
+                                                <span class="stats__total-diff">+10 за день</span>
+                                            </div>
+                                            <span class="stats__percent">+24%</span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section--v3">
+                                    <h3 class="section__title">Товаров на складе</h3>
+                                    <div class="section__content">
+                                        <div class="stats">
+                                            <div class="stats__total-wrapper">
+                                                <span class="stats__total">25743</span>
+                                                <span class="stats__total-diff">+140 за день</span>
+                                            </div>
+                                            <span class="stats__percent">+24%</span>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section--v3">
+                                    <h3 class="section__title">Прибыль</h3>
+                                    <div class="section__content">
+                                        <div class="stats">
+                                            <div class="stats__total-wrapper">
+                                                <span class="stats__total">₽12 321</span>
+                                                <span class="stats__total-diff">+10 за день</span>
+                                            </div>
+                                            <span class="stats__percent">+24%</span>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="section--v2">
+                                    <div class="section__header">
+                                        <h3 class="section__title">Продажи и расходы</h3>
+
+                                        <div class="dropdown">
+                                            <button type="button" class="btn dropdown__btn">
+                                                За неделю
+                                                <span class="btn__icon">
+                                                    <img src="img/icons/chevron-down.svg" alt="">
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="section__content">
+                                        <picture>
+                                            <source srcset="img/chart/chart.webp">
+                                            <img src="img/chart/chart.jpg" class="section__chart-image" alt="график">
+                                        </picture>
+                                    </div>
+                                </section>
+
+
+                            </div>
+                            <section class="section--v2">
+                                <h2 class="section__title">Заказы</h2>
+                                <div class="section__content">
+                                    <ul class="orders">
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--completed">
+                                                Завершен
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--sorting">
+                                                На сортировке
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--shipped">
+                                                Отгружено
+                                            </span>
+                                        </li>
+                                        <li class="orders__item">
+                                            <div class="orders__info">
+                                                <span class="orders__name">Заказ №2350523</span>
+                                                <span class="orders__from">Стройсклад</span>
+                                                <span class="orders__date">13:07 22 ноября</span>
+                                            </div>
+
+                                            <span class="orders__price">6035.00 ₽</span>
+
+                                            <span class="orders__state orders__state--shipped">
+                                                Отгружено
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
         </div>
     </div>
 
