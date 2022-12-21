@@ -625,4 +625,5 @@ p {
   gap: 10px;
   border: 0;
   background: none;
+  cursor: pointer;
 }
