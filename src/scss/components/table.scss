@@ -25,6 +25,29 @@
         }
     }
 
+    &--orders {
+        .table__cell {
+            .time {
+                display: block;
+
+                color: #afafaf;
+            }
+
+            &--created {
+                width: 200px;
+            }
+            &--shipment {
+                width: 220px;
+            }
+            &--status {
+                width: 145px;
+            }
+            &--price {
+                width: 268px;
+            }
+        }
+    }
+
     &__cell {
         padding: 16px;
 

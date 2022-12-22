@@ -806,6 +806,22 @@ p {
 .table__body .table__row:last-child {
   border-bottom: 0;
 }
+.table--orders .table__cell .time {
+  display: block;
+  color: #afafaf;
+}
+.table--orders .table__cell--created {
+  width: 200px;
+}
+.table--orders .table__cell--shipment {
+  width: 220px;
+}
+.table--orders .table__cell--status {
+  width: 145px;
+}
+.table--orders .table__cell--price {
+  width: 268px;
+}
 .table__cell {
   padding: 16px;
   border: 0;

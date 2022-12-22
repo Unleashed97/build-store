@@ -3,7 +3,7 @@
 
 <!-- head include -->
 @@include('html/partials/head.html', {
-"title": "BuildStore Catalog"
+"title": "BuildStore Orders"
 })
 
 <body>
@@ -27,7 +27,7 @@
                                 </span>
 
                                 <span class="nav__item-text">
-                                    Каталог
+                                    Главная
                                 </span>
                             </a>
                         </li>
@@ -49,10 +49,10 @@
                             <div class="nav__sublist-wrapper">
                                 <ul class="nav__sublist">
                                     <li class="nav__item">
-                                        <a href="orders" class="nav__link">Заказы</a>
+                                        <a href="orders" class="nav__link active">Заказы</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="catalog.html" class="nav__link active">Каталог</a>
+                                        <a href="catalog.html" class="nav__link">Каталог</a>
                                     </li>
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">Движение товаров</a>
@@ -132,28 +132,8 @@
                 <!-- main -->
                 <main class="main">
                     <section class="section section--v1 section--catalog">
-                        <h1 class="section__title">Главная</h1>
+                        <h1 class="section__title">Заказы</h1>
                         <div class="section__content">
-                            <nav class="tabs">
-                                <ul class="tabs__list">
-                                    <li class="tabs__item active">
-                                        Все
-                                        <span class="tabs__item-quantity">2103</span>
-                                    </li>
-                                    <li class="tabs__item ">
-                                        Продан
-                                        <span class="tabs__item-quantity">1024</span>
-                                    </li>
-                                    <li class="tabs__item ">
-                                        Зарезервирован
-                                        <span class="tabs__item-quantity">150</span>
-                                    </li>
-                                    <li class="tabs__item ">
-                                        Возвращён
-                                        <span class="tabs__item-quantity">17</span>
-                                    </li>
-                                </ul>
-                            </nav>
 
                             <div class="filters">
                                 <div class="filters__wrapper">
@@ -213,7 +193,7 @@
                                 </div>
                             </div>
 
-                            <table class="table table--catalog">
+                            <table class="table table--orders">
                                 <thead class="table__header">
                                     <tr class="table__row">
                                         <td class="table__cell table__cell--art">
@@ -223,20 +203,17 @@
                                         <td class="table__cell table__cell--name">
                                             Номенклатура
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            Ед. изм.
+                                        <td class="table__cell table__cell--created">
+                                            Когда создан
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            Кол-во
+                                        <td class="table__cell table__cell--shipment">
+                                            Отгрузка
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            Статус
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             Оптовая цена
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            В резерве
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            Возвращен
                                         </td>
                                     </tr>
                                 </thead>
@@ -249,20 +226,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                     <tr class="table__row">
@@ -273,20 +251,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                     <tr class="table__row">
@@ -297,20 +276,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                     <tr class="table__row">
@@ -321,20 +301,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                     <tr class="table__row">
@@ -345,20 +326,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                     <tr class="table__row">
@@ -369,20 +351,21 @@
                                         <td class="table__cell table__cell--name">
                                             Дверь межкомнатная Зодчий Bene Italia Элеганте 3
                                         </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
+                                        <td class="table__cell table__cell--created">
+                                            22.11.2022
+
+                                            <span class="time">14:24</span>
                                         </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
+                                        <td class="table__cell table__cell--shipment">
+                                            26.11.2022
+                                        </td>
+                                        <td class="table__cell table__cell--status">
+                                            <span class="orders__state orders__state--pending">
+                                                В обработке
+                                            </span>
                                         </td>
                                         <td class="table__cell table__cell--price">
                                             9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
                                         </td>
                                     </tr>
                                 </tbody>
