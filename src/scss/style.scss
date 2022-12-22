@@ -23,6 +23,8 @@ body {
     font-family: $family;
     font-size: 1.6rem;
     color: $colors-text;
+
+    background-color: #fafafa;
 }
 
 ul {
@@ -74,3 +76,7 @@ p {
 @import 'components/btn.scss';
 @import 'components/dropdown.scss';
 @import 'components/form.scss';
+@import 'components/tabs.scss';
+@import 'components/filters.scss';
+@import 'components/table.scss';
+@import 'components/pagination.scss';

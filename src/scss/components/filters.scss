@@ -1,0 +1,41 @@
+.filters {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__controls {
+        margin-top: 23px;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__controls-add,
+    &__controls-settings {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.45;
+        color: $colors-text-title;
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        padding: 10px 12px;
+
+        background-color: $colors-bg-highlight;
+        border-radius: 7px;
+    }
+}

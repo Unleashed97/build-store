@@ -1,0 +1,59 @@
+.table {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.46;
+    border-collapse: collapse;
+
+    border: 0;
+
+    &__header {
+        background-color: #fff6ef;
+        .table__cell {
+            font-weight: 500;
+        }
+    }
+
+    &__row {
+        border-bottom: 1px solid rgba(#000, 0.12);
+    }
+
+    &__body {
+        .table__row {
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__cell {
+        padding: 16px;
+
+        border: 0;
+
+        .checkbox {
+            margin-right: 10px;
+        }
+
+        &--art {
+            width: 145px;
+        }
+        &--name {
+            width: 266px;
+        }
+        &--unit {
+            width: 166px;
+        }
+        &--quantity {
+            width: 166px;
+        }
+        &--price {
+            width: 166px;
+        }
+        &--reserve {
+            width: 166px;
+        }
+        &--returned {
+            width: 166px;
+        }
+    }
+}

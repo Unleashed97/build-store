@@ -1,0 +1,45 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 26px;
+
+    font-size: 1.2rem;
+    line-height: 1.66;
+
+    &__items-per-page {
+        color: rgba(#000, 0.6);
+    }
+
+    &__select {
+        color: $colors-text;
+
+        background-color: #fff;
+        border: 0;
+
+        cursor: pointer;
+    }
+
+    &__stats {
+        color: $colors-text;
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: 0.3s linear;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}

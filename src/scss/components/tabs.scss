@@ -1,0 +1,57 @@
+.tabs {
+    height: 53px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #d2d2d2;
+
+    &__list {
+        display: flex;
+        gap: 4px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+
+        padding: 8px 16px;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.46;
+        color: $colors-text-title;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 0;
+            height: 2px;
+            background-color: #ff7d1f;
+
+            transition: 0.3s linear;
+        }
+
+        &.active,
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &.active {
+            font-weight: 600;
+        }
+    }
+
+    &__item-quantity {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $colors-text-light;
+    }
+}

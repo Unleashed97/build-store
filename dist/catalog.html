@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- head include -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>BuildStore</title>
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <!-- sidebar include -->
+            <aside class="sidebar">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="img/logo/logo.webp">
+                        <img src="img/logo/logo.png" class="logo sidebar__logo" alt="Логотип">
+                    </picture>
+                </a>
+
+                <nav class="nav sidebar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/house.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Главная
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <button type="button" class="btn nav__btn active">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/box.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Товары
+                                </span>
+
+                                <span class="nav__item-chevron">
+                                    <img src="img/icons/chevron-down.svg" alt="">
+                                </span>
+                            </button>
+
+                            <div class="nav__sublist-wrapper">
+                                <ul class="nav__sublist">
+                                    <li class="nav__item">
+                                        <a href="orders" class="nav__link">Заказы</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="catalog.html" class="nav__link active">Каталог</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">Движение товаров</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/doc.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Отчеты
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <button type="button" class="btn nav__btn">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/crm.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    CRM
+                                </span>
+
+                                <span class="nav__item-chevron">
+                                    <img src="img/icons/chevron-down.svg" alt="">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/card.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Бухгалтерия
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/geo-tag.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Поставщики
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                <span class="nav__item-icon">
+                                    <img src="img/icons/employees.svg" alt="">
+                                </span>
+
+                                <span class="nav__item-text">
+                                    Сотрудники
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </aside>
+
+            <div class="content">
+                <!-- header include -->
+                <header class="header">
+    <form action="/" class="form">
+        <!-- <input type="search" class="form__input" placeholder="Поиск"> -->
+        <button type="button" class="btn" aria-label="развернуть поисковую строку">
+            <img src="img/icons/search.svg" alt="поиск">
+        </button>
+    </form>
+
+    <div class="user-menu">
+        <img src="img/user-menu/avatar.jpg" alt="аватар" class="user-menu__userpic">
+
+        <span class="user-menu__name">
+            Николаев Н.В.
+
+            <img src="img/icons/triangle-down.svg" class="user-menu__icon" alt="">
+        </span>
+    </div>
+</header>
+
+                <!-- main -->
+                <main class="main">
+                    <section class="section section--v1 section--catalog">
+                        <h1 class="section__title">Главная</h1>
+                        <div class="section__content">
+                            <nav class="tabs">
+                                <ul class="tabs__list">
+                                    <li class="tabs__item active">
+                                        Все
+                                        <span class="tabs__item-quantity">2103</span>
+                                    </li>
+                                    <li class="tabs__item ">
+                                        Продан
+                                        <span class="tabs__item-quantity">1024</span>
+                                    </li>
+                                    <li class="tabs__item ">
+                                        Зарезервирован
+                                        <span class="tabs__item-quantity">150</span>
+                                    </li>
+                                    <li class="tabs__item ">
+                                        Возвращён
+                                        <span class="tabs__item-quantity">17</span>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="filters">
+                                <div class="filters__wrapper">
+                                    <form action="/" class="form form--filters">
+                                        <div class="form__group">
+                                            <label for="input-search" class="form__label">
+                                                Поиск
+                                                <input type="search" id="input-search" name="search-query"
+                                                    class="form__input" placeholder="Номер товара">
+                                            </label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label for="select-period" class="form__label">
+                                                Период
+                                                <select name="period" id="select-period" class="form__select">
+                                                    <option value="all">Все время</option>
+                                                    <option value="filter1">Фильтр</option>
+                                                    <option value="filter2">Фильтр</option>
+                                                    <option value="filter3">Фильтр</option>
+                                                    <option value="filter4">Фильтр</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="form__group">
+                                            <label for="select-provider" class="form__label">
+                                                Поставщики
+                                                <select name="provider" id="select-provider" class="form__select">
+                                                    <option value="">Выберите поставщика</option>
+                                                    <option value="filter1">Фильтр</option>
+                                                    <option value="filter2">Фильтр</option>
+                                                    <option value="filter3">Фильтр</option>
+                                                    <option value="filter4">Фильтр</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </form>
+
+                                    <select name="sorting" id="select-sorting"
+                                        class="form__select form__select--add-filter">
+                                        <option value="">Добавить фильтр</option>
+                                        <option value="filter1">Фильтр</option>
+                                        <option value="filter2">Фильтр</option>
+                                        <option value="filter3">Фильтр</option>
+                                        <option value="filter4">Фильтр</option>
+                                    </select>
+                                </div>
+
+                                <div class="filters__controls">
+                                    <button type="button" class="btn filters__controls-add">
+                                        <img src="img/icons/plus.svg" alt="плюс">
+                                        Добавить товар
+                                    </button>
+
+                                    <button type="button" class="btn filters__controls-settings">
+                                        <img src="img/icons/dots.svg" alt="точки">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <table class="table table--catalog">
+                                <thead class="table__header">
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            Артикул
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Номенклатура
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            Ед. изм.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            Кол-во
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            Оптовая цена
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            В резерве
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            Возвращен
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody class="table__body">
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell--art">
+                                            <input type="checkbox" class="checkbox">
+                                            4631224
+                                        </td>
+                                        <td class="table__cell table__cell--name">
+                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
+                                        </td>
+                                        <td class="table__cell table__cell--unit">
+                                            шт.
+                                        </td>
+                                        <td class="table__cell table__cell--quantity">
+                                            24
+                                        </td>
+                                        <td class="table__cell table__cell--price">
+                                            9 165 ₽
+                                        </td>
+                                        <td class="table__cell table__cell--reserve">
+                                            2
+                                        </td>
+                                        <td class="table__cell table__cell--returned">
+                                            0
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <div class="pagination">
+                        <div class="pagination__items-per-page">
+                            Записей на странице
+
+                            <select name="select-items-per-page" class="pagination__select" id="">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+
+                        <span class="pagination__stats">
+                            1-10 из 380
+                        </span>
+
+                        <div class="pagination__btns">
+                            <button type="button" class="btn pagination__btn pagination__btn--previous"
+                                aria-label="предыдущая страница таблицы">
+                                <img src="img/icons/chevron-left.svg" alt="">
+                            </button>
+                            <button type="button" class="btn pagination__btn pagination__btn--next"
+                                aria-label="следующая страница таблицы">
+                                <img src="img/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
