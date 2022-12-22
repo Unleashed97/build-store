@@ -16,6 +16,11 @@
         <div class="wrapper">
             <!-- sidebar include -->
             <aside class="sidebar">
+
+    <button type="button" class="sidebar__close" aria-label="закрыть сайдбар">
+        <img src="img/icons/plus.svg" alt="крестик">
+    </button>
+
     <a href="index.html">
         <picture>
             <source srcset="img/logo/logo.webp">
@@ -133,7 +138,13 @@
             <div class="content">
                 <!-- header include -->
                 <header class="header">
-    <form action="/" class="form">
+    <button type="button" class="btn burger">
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+    </button>
+
+    <form action="/" class="form form--search">
         <!-- <input type="search" class="form__input" placeholder="Поиск"> -->
         <button type="button" class="btn" aria-label="развернуть поисковую строку">
             <img src="img/icons/search.svg" alt="поиск">
@@ -153,7 +164,7 @@
 
                 <!-- main -->
                 <main class="main">
-                    <section class="section section--v1">
+                    <section class="section section--v1 section--main">
                         <h1 class="section__title">Главная</h1>
                         <div class="section__content">
                             <div class="section__info-block">
@@ -229,7 +240,7 @@
 
 
                             </div>
-                            <section class="section--v2">
+                            <section class="section--v2 section--orders">
                                 <h2 class="section__title">Заказы</h2>
                                 <div class="section__content">
                                     <ul class="orders">

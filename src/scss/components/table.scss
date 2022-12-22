@@ -1,13 +1,18 @@
 .table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     line-height: 1.46;
-    border-collapse: collapse;
 
+    border-collapse: collapse;
     border: 0;
 
     &__header {
         background-color: #fff6ef;
+
         .table__cell {
             font-weight: 500;
         }
@@ -34,16 +39,16 @@
             }
 
             &--created {
-                width: 200px;
+                min-width: 200px;
             }
             &--shipment {
-                width: 220px;
+                min-width: 220px;
             }
             &--status {
-                width: 145px;
+                min-width: 145px;
             }
             &--price {
-                width: 268px;
+                min-width: 268px;
             }
         }
     }
@@ -58,25 +63,25 @@
         }
 
         &--art {
-            width: 145px;
+            min-width: 145px;
         }
         &--name {
-            width: 266px;
+            min-width: 266px;
         }
         &--unit {
-            width: 166px;
+            min-width: 166px;
         }
         &--quantity {
-            width: 166px;
+            min-width: 166px;
         }
         &--price {
-            width: 166px;
+            min-width: 166px;
         }
         &--reserve {
-            width: 166px;
+            min-width: 166px;
         }
         &--returned {
-            width: 166px;
+            min-width: 166px;
         }
     }
 }

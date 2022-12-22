@@ -19,13 +19,25 @@
 
         border: 1px solid #cfcfcf;
         border-radius: 5px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    &--search {
+        margin-right: auto;
     }
 
     &--filters {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: auto;
+        display: flex;
+        flex-wrap: wrap;
         gap: 20px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            flex-direction: column;
+        }
 
         .form__label {
             display: flex;
@@ -45,6 +57,10 @@
             border-radius: 5px;
             border: 1px solid #cfcfcf;
             background-color: #fff;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
 
         .form__input {
@@ -55,11 +71,19 @@
             background-repeat: no-repeat;
             background-position: left 12px center;
             background-size: 19px;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
 
         .form__select {
             width: 233px;
             padding: 10px 30px 10px 12px;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
     }
 }

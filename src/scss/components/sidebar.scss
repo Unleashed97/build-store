@@ -2,12 +2,58 @@
     grid-area: sidebar;
 
     width: 256px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 
     padding: 35px 8px;
 
     border-right: 1px solid rgba(#000, 0.12);
     background-color: #fff;
+
+    @media (max-width: 768px) {
+        position: absolute;
+
+        transform: translate(-110%);
+
+        transition: 0.3s linear;
+
+        &.active {
+            transform: translate(0);
+            .sidebar__close {
+                display: block;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 8px;
+
+        box-sizing: content-box;
+
+        display: none;
+        width: 16px;
+        height: 16px;
+
+        padding: 5px;
+
+        background: none;
+        border-radius: 5px;
+        border: 0;
+        overflow: hidden;
+        cursor: pointer;
+
+        transition: 0.3s linear;
+
+        &:hover {
+            background-color: #ccc;
+        }
+
+        img {
+            transform: rotate(45deg);
+        }
+    }
 
     &__logo {
         display: block;

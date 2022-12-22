@@ -16,6 +16,10 @@
         <div class="wrapper">
             <!-- sidebar include -->
             <aside class="sidebar">
+                <button type="button" class="sidebar__close" aria-label="закрыть сайдбар">
+                    <img src="img/icons/plus.svg" alt="крестик">
+                </button>
+
                 <a href="index.html">
                     <picture>
                         <source srcset="img/logo/logo.webp">
@@ -54,7 +58,7 @@
                             <div class="nav__sublist-wrapper">
                                 <ul class="nav__sublist">
                                     <li class="nav__item">
-                                        <a href="orders" class="nav__link">Заказы</a>
+                                        <a href="orders.html" class="nav__link">Заказы</a>
                                     </li>
                                     <li class="nav__item">
                                         <a href="catalog.html" class="nav__link active">Каталог</a>
@@ -133,7 +137,13 @@
             <div class="content">
                 <!-- header include -->
                 <header class="header">
-    <form action="/" class="form">
+    <button type="button" class="btn burger">
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+        <span class="burger__item"></span>
+    </button>
+
+    <form action="/" class="form form--search">
         <!-- <input type="search" class="form__input" placeholder="Поиск"> -->
         <button type="button" class="btn" aria-label="развернуть поисковую строку">
             <img src="img/icons/search.svg" alt="поиск">

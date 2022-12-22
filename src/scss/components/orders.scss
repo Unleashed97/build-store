@@ -9,6 +9,12 @@
 
         border-bottom: 1px solid #eeeded;
 
+        @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
         &:last-child {
             border-bottom: 0;
             margin-bottom: 0;

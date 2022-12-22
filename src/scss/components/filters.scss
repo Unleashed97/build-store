@@ -6,10 +6,17 @@
 
     margin-bottom: 20px;
 
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media (max-width: 992px) {
+        }
     }
 
     &__controls {

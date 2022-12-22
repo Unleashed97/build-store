@@ -14,3 +14,17 @@ export const sidebarNavToggleList = () => {
         }),
     )
 }
+
+export const sidebarToggle = () => {
+    const sidebar = document.querySelector('.sidebar')
+    const sidebarOpenBtn = document.querySelector('.burger')
+    const sidebarCloseBtn = document.querySelector('.sidebar__close')
+
+    sidebarOpenBtn.addEventListener('click', () => {
+        sidebar.classList.add('active')
+    })
+
+    sidebarCloseBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active')
+    })
+}

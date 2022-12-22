@@ -52,6 +52,10 @@ p {
     display: grid;
     grid-template-areas: 'sidebar content';
     grid-template-columns: 256px 1fr;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .content {
@@ -60,6 +64,8 @@ p {
     padding: 20px 30px 30px;
 
     background-color: $colors-bg;
+
+    overflow: hidden;
 }
 
 // components
@@ -80,3 +86,4 @@ p {
 @import 'components/filters.scss';
 @import 'components/table.scss';
 @import 'components/pagination.scss';
+@import 'components/burger.scss';
