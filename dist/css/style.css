@@ -429,16 +429,24 @@ p {
   letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.87);
 }
+.nav__sublist-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
+}
+.nav__sublist-wrapper.active {
+  max-height: 100vh;
+}
 .nav__sublist {
-  padding: 8px 0px 18px 53px;
+  padding: 8px 0 18px;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.44;
 }
 .nav__sublist .nav__link {
-  padding: 4px 0;
+  padding: 4px 0 4px 53px;
 }
-.nav__link {
+.nav__link, .nav__btn {
   padding: 15px 19px 15px 16px;
   display: flex;
   align-items: center;
@@ -447,12 +455,20 @@ p {
   border-radius: 5px;
   transition: 0.3s linear;
 }
-.nav__link.active, .nav__link:hover {
+.nav__link.active, .nav__link:hover, .nav__btn.active, .nav__btn:hover {
   background-color: #ffeddf;
 }
-.nav__link.active {
+.nav__link.active, .nav__btn.active {
   color: #000;
   font-weight: 600;
+}
+.nav__btn.btn {
+  width: 100%;
+  padding: 15px 19px 15px 16px;
+  transition: 0.3s linear;
+}
+.nav__btn.btn.active {
+  background-color: #ffeddf;
 }
 .nav__item-text {
   margin-right: auto;
@@ -619,10 +635,12 @@ p {
   padding: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
   border: 0;
   background: none;
   cursor: pointer;
+}
+.btn__icon {
+  margin-left: 10px;
 }
 
 .dropdown__btn {

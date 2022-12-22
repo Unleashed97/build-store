@@ -11,22 +11,34 @@
         color: $colors-text;
     }
 
+    &__sublist-wrapper {
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.3s linear;
+
+        &.active {
+            max-height: 100vh;
+        }
+    }
+
     &__sublist {
-        padding: 8px 0px 18px 53px;
+        padding: 8px 0 18px;
 
         font-family: 'Roboto', sans-serif;
-        font-size: 14px;
+        font-size: 1.4rem;
         line-height: 1.44;
 
         .nav__link {
-            padding: 4px 0;
+            padding: 4px 0 4px 53px;
         }
     }
 
     &__item {
     }
 
-    &__link {
+    &__link,
+    &__btn {
         padding: 15px 19px 15px 16px;
 
         display: flex;
@@ -46,6 +58,17 @@
         &.active {
             color: $colors-text-title;
             font-weight: 600;
+        }
+    }
+
+    &__btn.btn {
+        width: 100%;
+        padding: 15px 19px 15px 16px;
+
+        transition: 0.3s linear;
+
+        &.active {
+            background-color: $colors-bg-highlight;
         }
     }
 
