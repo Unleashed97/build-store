@@ -56,7 +56,10 @@
         }
 
         &.active {
-            color: $colors-text-title;
+            .nav__item-icon svg path {
+                fill: $colors-highlight;
+            }
+            color: $colors-highlight;
             font-weight: 600;
         }
     }
@@ -69,6 +72,12 @@
 
         &.active {
             background-color: $colors-bg-highlight;
+        }
+    }
+
+    &__item-icon {
+        svg path {
+            transition: 0.3s linear;
         }
     }
 

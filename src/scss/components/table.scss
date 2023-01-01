@@ -69,19 +69,22 @@
             min-width: 266px;
         }
         &--unit {
-            min-width: 166px;
+            min-width: 146px;
         }
         &--quantity {
-            min-width: 166px;
+            min-width: 146px;
         }
         &--price {
-            min-width: 166px;
+            min-width: 146px;
         }
         &--reserve {
-            min-width: 166px;
+            min-width: 146px;
         }
         &--returned {
-            min-width: 166px;
+            min-width: 146px;
+        }
+        &--photo {
+            min-width: 100px;
         }
     }
 }

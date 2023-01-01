@@ -3,9 +3,13 @@
         padding-bottom: 7px;
         margin-bottom: 7px;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center normal;
 
         border-bottom: 1px solid #eeeded;
 
@@ -42,11 +46,14 @@
     }
 
     &__price {
+        justify-self: end;
         line-height: 1.45;
         color: $colors-text-title;
     }
 
     &__state {
+        justify-self: end;
+        // align-self: center;
         padding: 5px 10px;
 
         font-size: 1.2rem;
@@ -68,6 +75,9 @@
         }
         &--shipped {
             background-color: $colors-shipped;
+        }
+        &--part-returned {
+            background-color: $colors-part-returned;
         }
     }
 }
