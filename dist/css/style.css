@@ -623,7 +623,15 @@ p {
     grid-template-columns: 1fr;
   }
 }
-
+.section--profile-form .section__title {
+  margin-bottom: 11px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.44;
+  letter-spacing: 0.03em;
+  color: #000;
+}
 .orders__item {
   padding-bottom: 7px;
   margin-bottom: 7px;
@@ -825,6 +833,9 @@ p {
 .form--profile .form__group:last-child {
   margin-bottom: 0;
 }
+.form--profile .form__group--lg {
+  width: 100%;
+}
 .form--profile .form__input {
   width: 240px;
   padding: 14px 0;
@@ -835,6 +846,19 @@ p {
   background: none;
   border: 0;
   border-bottom: 1px solid #d4d6d7;
+}
+.form--profile .form__file-block {
+  font-size: 1.4rem;
+  color: #ff7d1f;
+}
+.form--profile .form__input-file {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
 }
 .form--profile .form__label {
   display: flex;
@@ -1104,4 +1128,72 @@ p {
   font-size: 1.4rem;
   line-height: 1.44;
   color: #939393;
+}
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.modal--profile.active {
+  display: flex;
+}
+.modal--profile .modal__inner {
+  position: relative;
+  max-width: 771px;
+  min-height: 625px;
+  padding: 25px 30px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.modal--profile .modal-btn-close {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  z-index: 1;
+}
+.modal--profile .modal__title {
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #000;
+}
+.modal--profile .modal__footer {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+}
+.modal--profile .modal__footer .btn {
+  padding: 12px 67px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.46;
+  font-size: 1.6rem;
+  border-radius: 5px;
+}
+.modal--profile .modal__footer .btn--orange {
+  color: #fff;
+  background-color: #ff7d1f;
+}
+.modal--profile .modal__footer .btn--rose {
+  color: #000;
+  background-color: #ffeddf;
+}
+.modal--profile .form {
+  gap: 20px;
+}
+.modal--profile .form__input {
+  max-width: 228px;
+}
+.modal--profile .profile {
+  padding: 0;
+  border: 0;
+}
+.modal--profile .profile__image-block {
+  max-width: 203px;
 }

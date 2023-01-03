@@ -28,3 +28,25 @@ export const sidebarToggle = () => {
         sidebar.classList.remove('active')
     })
 }
+
+export const handleModal = () => {
+    const modal = document.querySelector('.modal')
+    const modalOpenBtn = document.querySelector(
+        '.filters__controls-add-employee',
+    )
+    const modalCloseBtn = modal.querySelector('.modal-btn-close')
+
+    modalOpenBtn.addEventListener('click', () => {
+        modal.classList.add('active')
+    })
+
+    modalCloseBtn.addEventListener('click', () => {
+        modal.classList.remove('active')
+    })
+
+    window.addEventListener('click', ({ target }) => {
+        if (target === modal) {
+            modal.classList.remove('active')
+        }
+    })
+}

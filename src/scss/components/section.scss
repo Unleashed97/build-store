@@ -111,4 +111,20 @@
             }
         }
     }
+
+    &--profile-form {
+        .section__title {
+            margin-bottom: 11px;
+
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 1.44;
+            letter-spacing: 0.03em;
+            color: $colors-text-title;
+        }
+
+        .section__content {
+        }
+    }
 }
