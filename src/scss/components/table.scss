@@ -86,5 +86,28 @@
         &--photo {
             min-width: 100px;
         }
+
+        &--id {
+            min-width: 145px;
+        }
+
+        &--surname {
+            min-width: 200px;
+        }
+        &--f-name {
+            min-width: 179px;
+        }
+        &--m-name {
+            min-width: 179px;
+        }
+        &--position {
+            min-width: 179px;
+        }
+        &--tel {
+            min-width: 179px;
+        }
+        &--email {
+            min-width: 179px;
+        }
     }
 }

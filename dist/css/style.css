@@ -813,6 +813,38 @@ p {
     width: 100%;
   }
 }
+.form--profile {
+  display: flex;
+  gap: 30px;
+}
+.form--profile .form__group {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 21px;
+}
+.form--profile .form__group:last-child {
+  margin-bottom: 0;
+}
+.form--profile .form__input {
+  width: 240px;
+  padding: 14px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.44;
+  color: #000;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d4d6d7;
+}
+.form--profile .form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  color: #767d81;
+  font-size: 1.4rem;
+}
 
 .tabs {
   height: 53px;
@@ -882,7 +914,7 @@ p {
   align-items: center;
   gap: 16px;
 }
-.filters__controls-add, .filters__controls-settings {
+.filters .btn, .filters__controls-settings {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   line-height: 1.45;
@@ -966,6 +998,27 @@ p {
 .table__cell--photo {
   min-width: 100px;
 }
+.table__cell--id {
+  min-width: 145px;
+}
+.table__cell--surname {
+  min-width: 200px;
+}
+.table__cell--f-name {
+  min-width: 179px;
+}
+.table__cell--m-name {
+  min-width: 179px;
+}
+.table__cell--position {
+  min-width: 179px;
+}
+.table__cell--tel {
+  min-width: 179px;
+}
+.table__cell--email {
+  min-width: 179px;
+}
 
 .pagination {
   display: flex;
@@ -1030,4 +1083,25 @@ p {
   background-color: #000;
   border-radius: 10px;
   transition: 0.3s linear;
+}
+
+.profile {
+  max-width: 846px;
+  width: 100%;
+  padding: 40px 66px 40px 35px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background-color: #fff;
+}
+.profile__image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.profile__position {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.44;
+  color: #939393;
 }

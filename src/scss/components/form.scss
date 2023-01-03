@@ -86,4 +86,45 @@
             }
         }
     }
+
+    &--profile {
+        display: flex;
+        gap: 30px;
+
+        .form__group {
+            display: flex;
+            gap: 32px;
+
+            margin-bottom: 21px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .form__input {
+            width: 240px;
+
+            padding: 14px 0;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.44;
+            color: $colors-text-title;
+
+            background: none;
+            border: 0;
+            border-bottom: 1px solid #d4d6d7;
+        }
+
+        .form__label {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 300;
+            color: #767d81;
+            font-size: 1.4rem;
+        }
+    }
 }

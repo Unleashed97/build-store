@@ -180,301 +180,62 @@
 
                 <!-- main -->
                 <main class="main">
-                    <section class="section section--v1 section--catalog">
-                        <h1 class="section__title">Каталог</h1>
+                    <section class="section section--profile">
+                        <h1 class="section__title">Редактирование профиля</h1>
                         <div class="section__content">
+                            <div class="profile">
+                                <form action="/" class="form form--profile">
+                                    <div class="profile__image-block">
+                                        <picture>
+                                            <source srcset="img/profile/profile-pic.webp">
+                                            <img src="img/profile/profile-pic.jpg" class="profile__image"
+                                                alt="Изображение профиля">
+                                        </picture>
+                                        <span class="profile__position">Администратор</span>
+                                    </div>
 
-                            <div class="filters">
-                                <div class="filters__wrapper">
-                                    <form action="/" class="form form--filters">
+                                    <div class="profile__text-block">
                                         <div class="form__group">
-                                            <label for="input-search" class="form__label">
-                                                Поиск
-                                                <input type="search" id="input-search" name="search-query"
-                                                    class="form__input" placeholder="Номер товара">
+                                            <label for="input-name" class="form__label">
+                                                <span>Имя</span>
+                                                <input id="input-name" type="text" name="name" class="form__input"
+                                                    value="Никита">
+                                            </label>
+                                            <label for="input-surname" class="form__label">
+                                                <span>Фамилия</span>
+                                                <input id="input-surname" type="text" name="surname" class="form__input"
+                                                    value="Николаев">
                                             </label>
                                         </div>
                                         <div class="form__group">
-                                            <label for="select-period" class="form__label">
-                                                Период
-                                                <select name="period" id="select-period" class="form__select">
-                                                    <option value="all">Все время</option>
-                                                    <option value="filter1">Фильтр</option>
-                                                    <option value="filter2">Фильтр</option>
-                                                    <option value="filter3">Фильтр</option>
-                                                    <option value="filter4">Фильтр</option>
-                                                </select>
+                                            <label for="input-mid-name" class="form__label">
+                                                <span>Отчество</span>
+                                                <input id="input-mid-name" type="text" name="mid-name"
+                                                    class="form__input" value="Васильевич">
+                                            </label>
+                                            <label for="input-birthday" class="form__label">
+                                                <span>Дата рождения</span>
+                                                <input id="input-birthday" type="date" name="birthday"
+                                                    class="form__input" value="13.04.1999">
                                             </label>
                                         </div>
                                         <div class="form__group">
-                                            <label for="select-provider" class="form__label">
-                                                Поставщики
-                                                <select name="provider" id="select-provider" class="form__select">
-                                                    <option value="">Выберите поставщика</option>
-                                                    <option value="filter1">Фильтр</option>
-                                                    <option value="filter2">Фильтр</option>
-                                                    <option value="filter3">Фильтр</option>
-                                                    <option value="filter4">Фильтр</option>
-                                                </select>
+                                            <label for="input-tel" class="form__label">
+                                                <span>Телефон</span>
+                                                <input id="input-tel" type="tel" name="tel" class="form__input"
+                                                    value="+7 (963) 532-43-35">
+                                            </label>
+                                            <label for="input-email" class="form__label">
+                                                <span>Эл. почта</span>
+                                                <input id="input-email" type="email" name="email" class="form__input"
+                                                    value="mymailwork@example.com">
                                             </label>
                                         </div>
-                                    </form>
-
-                                    <select name="sorting" id="select-sorting"
-                                        class="form__select form__select--add-filter">
-                                        <option value="">Добавить фильтр</option>
-                                        <option value="filter1">Фильтр</option>
-                                        <option value="filter2">Фильтр</option>
-                                        <option value="filter3">Фильтр</option>
-                                        <option value="filter4">Фильтр</option>
-                                    </select>
-                                </div>
-
-                                <div class="filters__controls">
-                                    <button type="button" class="btn filters__controls-add">
-                                        <img src="img/icons/plus.svg" alt="плюс">
-                                        Добавить товар
-                                    </button>
-
-                                    <button type="button" class="btn filters__controls-settings">
-                                        <img src="img/icons/dots.svg" alt="точки">
-                                    </button>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
-
-                            <table class="table table--catalog">
-                                <thead class="table__header">
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            Артикул
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Номенклатура
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            Кол-во
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            Ед. изм.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            Оптовая цена
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            В резерве
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            Возвращен
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            Фото
-                                        </td>
-                                    </tr>
-                                </thead>
-                                <tbody class="table__body">
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                    <tr class="table__row">
-                                        <td class="table__cell table__cell--art">
-                                            <input type="checkbox" class="checkbox">
-                                            4631224
-                                        </td>
-                                        <td class="table__cell table__cell--name">
-                                            Дверь межкомнатная Зодчий Bene Italia Элеганте 3
-                                        </td>
-                                        <td class="table__cell table__cell--quantity">
-                                            24
-                                        </td>
-                                        <td class="table__cell table__cell--unit">
-                                            шт.
-                                        </td>
-                                        <td class="table__cell table__cell--price">
-                                            9 165 ₽
-                                        </td>
-                                        <td class="table__cell table__cell--reserve">
-                                            2
-                                        </td>
-                                        <td class="table__cell table__cell--returned">
-                                            0
-                                        </td>
-                                        <td class="table__cell table__cell--photo">
-                                            <img src="img/good/good.jpg"
-                                                alt="Дверь межкомнатная Зодчий Bene Italia Элеганте 3">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </section>
-
-                    <div class="pagination">
-                        <div class="pagination__items-per-page">
-                            Записей на странице
-
-                            <select name="select-items-per-page" class="pagination__select" id="">
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select>
-                        </div>
-
-                        <span class="pagination__stats">
-                            1-10 из 380
-                        </span>
-
-                        <div class="pagination__btns">
-                            <button type="button" class="btn pagination__btn pagination__btn--previous"
-                                aria-label="предыдущая страница таблицы">
-                                <img src="img/icons/chevron-left.svg" alt="">
-                            </button>
-                            <button type="button" class="btn pagination__btn pagination__btn--next"
-                                aria-label="следующая страница таблицы">
-                                <img src="img/icons/chevron-right.svg" alt="">
-                            </button>
-                        </div>
-
-                    </div>
-
                 </main>
             </div>
         </div>
