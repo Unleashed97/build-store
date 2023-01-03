@@ -14,6 +14,88 @@
 <body>
     <div class="container">
         <div class="wrapper">
+
+            <!-- header include -->
+            <div class="modal modal--good">
+    <div class="modal__inner">
+        <button type="button" class="btn modal-btn-close" aria-label="Закрыть модальное окно">
+            <img src="img/icons/close.svg" alt="">
+        </button>
+
+        <h2 class="modal__title">
+            Добавление товара
+        </h2>
+
+        <form action="/" class="form form--profile form--good">
+
+            <section class="section section--good-main">
+                <h3 class="section__title">Основная информация</h3>
+
+                <div class="section__content">
+
+
+                    <div class="profile__text-block">
+                        <div class="form__row form__row--top">
+                            <div class="form__group">
+                                <input type="number" name="art" class="form__input" placeholder="Артикул" required>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" name="nomenclature" class="form__input form__input--nomenclature"
+                                    placeholder="Номенклатура" required>
+                            </div>
+                        </div>
+
+                        <div class="form__row form__row--bottom">
+                            <div class="form__group">
+                                <input type="number" name="quantity" class="form__input" placeholder="Кол-во" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="select-unit" class="form__label">
+                                    <span>Еденица измерения</span>
+                                    <select name="" id="select-unit" class="form__select">
+                                        <option value="шт.">шт.</option>
+                                        <option value="шт.">шт.</option>
+                                        <option value="шт.">шт.</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" name="price" class="form__input" placeholder="Цена товара">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__footer">
+                        <button type="button" class="btn btn--orange modal__continue">Добавить</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--good-image">
+                <h3 class="section__title">Изображения</h3>
+
+                <div class="section__content">
+                    <div class="form__file-block">
+                        <div class="form__file">
+                            <input type="file" class="form__input-file" accept="image/png, image/jpeg">
+
+                            <img src="img/form/file-icon.jpg" class="form__file-icon" alt="">
+                            <span class="form__file-add">Нажмите для добавления</span>
+                            <span class="form__file-text">или прикрепите</span>
+                            <span class="form__file-accept">PNG или JPG (max. 3MB)</span>
+                        </div>
+
+                        <img src="img/form/placeholder.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+</div>
+
             <!-- sidebar include -->
             <aside class="sidebar">
 
@@ -259,7 +341,7 @@
                                 </div>
 
                                 <div class="filters__controls">
-                                    <button type="button" class="btn filters__controls-add">
+                                    <button type="button" class="btn filters__controls-add modal-good-add">
                                         <img src="img/icons/plus.svg" alt="плюс">
                                         Добавить товар
                                     </button>

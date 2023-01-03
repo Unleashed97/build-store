@@ -9,6 +9,10 @@
 <body>
     <div class="container">
         <div class="wrapper">
+
+            <!-- header include -->
+            @@include('html/partials/modal-good-add.html')
+
             <!-- sidebar include -->
             <aside class="sidebar">
 
@@ -231,7 +235,7 @@
                                 </div>
 
                                 <div class="filters__controls">
-                                    <button type="button" class="btn filters__controls-add">
+                                    <button type="button" class="btn filters__controls-add modal-good-add">
                                         <img src="img/icons/plus.svg" alt="плюс">
                                         Добавить товар
                                     </button>
