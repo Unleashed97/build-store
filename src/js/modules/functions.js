@@ -76,3 +76,29 @@ export const handleGoodModal = () => {
         })
     }
 }
+export const handleOrderModal = () => {
+    const modal = document.querySelector('.modal--order')
+
+    if (modal) {
+        const modalGoodRow = document.querySelectorAll(
+            '.table--orders > .table__body .table__row',
+        )
+        const modalCloseBtn = modal.querySelector('.modal-btn-close')
+
+        modalGoodRow.forEach((goodRow) =>
+            goodRow.addEventListener('click', () => {
+                modal.classList.add('active')
+            }),
+        )
+
+        modalCloseBtn.addEventListener('click', () => {
+            modal.classList.remove('active')
+        })
+
+        window.addEventListener('click', ({ target }) => {
+            if (target === modal) {
+                modal.classList.remove('active')
+            }
+        })
+    }
+}

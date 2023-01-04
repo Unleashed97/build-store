@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
 
+    padding: 20px;
+
     background-color: rgba(#000, 0.15);
 
     &--profile {
@@ -88,9 +90,6 @@
     }
 
     &--good {
-        &.active {
-            display: flex;
-        }
         .modal__inner {
             position: relative;
             max-width: 771px;
@@ -100,23 +99,6 @@
 
             background-color: #fff;
             border-radius: 10px;
-        }
-
-        .modal-btn-close {
-            position: absolute;
-            top: 34px;
-            right: 34px;
-            z-index: 1;
-        }
-
-        .modal__title {
-            margin-bottom: 20px;
-
-            font-family: 'Ubuntu', sans-serif;
-            font-weight: 500;
-            font-size: 2.4rem;
-            line-height: 1.42;
-            color: $colors-text-title;
         }
 
         .modal__footer {
@@ -145,6 +127,152 @@
                 color: #000;
 
                 background-color: $colors-bg-highlight;
+            }
+        }
+    }
+
+    &--order {
+        &.active {
+            display: flex;
+        }
+
+        .modal__inner {
+            position: relative;
+            width: 100%;
+            max-width: 970px;
+            min-height: 625px;
+
+            padding: 25px 30px 30px;
+
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .modal-btn-close {
+            position: absolute;
+            top: 34px;
+            right: 34px;
+            z-index: 1;
+
+            @media (max-width: 576px) {
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        .modal__title {
+            margin-bottom: 5px;
+
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 1.42;
+            color: $colors-text-title;
+
+            @media (max-width: 576px) {
+                font-size: 2rem;
+            }
+        }
+
+        .modal__header {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            border-bottom: 1px solid #cfcfcf;
+        }
+
+        .modal__order {
+            margin-bottom: 15px;
+
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 2.2rem;
+            line-height: 1.42;
+
+            @media (max-width: 576px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .modal__order-status {
+            display: block;
+            width: fit-content;
+
+            margin-bottom: 15px;
+
+            padding: 5px 10px;
+
+            font-size: 1.4rem;
+            line-height: 1.45;
+
+            border-radius: 10px;
+
+            @media (max-width: 576px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .modal__order-update {
+            font-size: 1.4rem;
+            line-height: 1.45;
+            color: #686868;
+        }
+
+        .modal__art {
+            display: block;
+
+            margin-bottom: 15px;
+
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.46;
+            color: #686868;
+
+            @media (max-width: 576px) {
+                font-size: 1.4rem;
+            }
+        }
+
+        .modal__order-data {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal__order-data-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal__order-data-row {
+            display: grid;
+            grid-template-columns: 80px 170px;
+            gap: 50px;
+
+            @media (max-width: 576px) {
+                grid-template-columns: 80px auto;
+            }
+        }
+
+        .modal__order-data-item {
+            display: flex;
+            flex-direction: column;
+            color: #000;
+        }
+
+        .modal__order-data-item-caption {
+            display: block;
+            margin-bottom: 3px;
+
+            font-size: 1.4rem;
+            line-height: 1.46;
+            color: #686868;
+        }
+
+        .modal__order-data-image {
+            @media (max-width: 768px) {
+                img {
+                    max-width: 80px;
+                }
             }
         }
     }
