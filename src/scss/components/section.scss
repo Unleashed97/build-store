@@ -91,6 +91,15 @@
         }
     }
 
+    &--profile {
+    }
+
+    &--profile-form {
+        margin-bottom: 70px;
+        .section__inner {
+        }
+    }
+
     &--catalog {
         .section__content {
             display: block;
@@ -125,6 +134,28 @@
         }
 
         .section__content {
+        }
+    }
+
+    &--good-main {
+        .section__title {
+            margin-bottom: 20px;
+
+            font-size: 1.8rem;
+            line-height: 1.46;
+
+            font-weight: 600;
+        }
+    }
+    &--good-image {
+        margin-bottom: 60px;
+        .section__title {
+            margin-bottom: 20px;
+
+            font-size: 1.8rem;
+            line-height: 1.46;
+
+            font-weight: 600;
         }
     }
 

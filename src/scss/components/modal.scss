@@ -1,7 +1,9 @@
 .modal {
     position: absolute;
-    inset: 0;
     z-index: 10;
+
+    width: 100%;
+    min-height: 100%;
 
     display: none;
     align-items: center;
@@ -24,6 +26,8 @@
 
             background-color: #fff;
             border-radius: 10px;
+
+            overflow-y: auto;
         }
 
         .modal-btn-close {
@@ -90,6 +94,10 @@
     }
 
     &--good {
+        &.active {
+            display: flex;
+        }
+
         .modal__inner {
             position: relative;
             max-width: 771px;
@@ -99,6 +107,31 @@
 
             background-color: #fff;
             border-radius: 10px;
+
+            margin: auto;
+            overflow-y: auto;
+        }
+
+        .modal-btn-close {
+            position: absolute;
+            top: 34px;
+            right: 34px;
+            z-index: 1;
+
+            @media (max-width: 576px) {
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        .modal__title {
+            margin-bottom: 20px;
+
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 1.42;
+            color: $colors-text-title;
         }
 
         .modal__footer {
