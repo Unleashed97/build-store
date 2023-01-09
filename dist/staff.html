@@ -98,6 +98,38 @@
             </div>
         </section>
 
+        <section class="section--profile-form-password">
+            <h3 class="section__title">Создание пароля</h3>
+
+            <div class="section__content">
+                <div class="profile">
+                    <form action="/" class="form form--profile-password">
+                        <div class="profile__text-block">
+                            <div class="form__group">
+                                <label for="input-pas" class="form__label">
+                                    <span>Новый пароль</span>
+                                    <input id="input-password" type="password" name="password" class="form__input"
+                                        required>
+                                </label>
+                            </div>
+                            <div class="form__group">
+                                <label for="input-pas-rep" class="form__label">
+                                    <span>Повторите пароль</span>
+                                    <input id="input-pas-rep" type="password" name="password-repeat" class="form__input"
+                                        required>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal__footer">
+                    <button type="button" class="btn btn--rose modal__continue">Назад</button>
+                    <button type="button" class="btn btn--orange modal__continue">Завершить</button>
+                </div>
+            </div>
+        </section>
+
     </div>
 </div>
 
@@ -110,6 +142,8 @@
 
                 <a href="index.html">
                     <picture>
+                        <source srcset="img/logo/logo-sm.webp" media="(max-width:992px)">
+                        <source srcset="img/logo/logo-sm.png" media="(max-width:992px)">
                         <source srcset="img/logo/logo.webp">
                         <img src="img/logo/logo.png" class="logo sidebar__logo" alt="Логотип">
                     </picture>

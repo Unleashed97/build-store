@@ -83,8 +83,22 @@
 
     &__item-text {
         margin-right: auto;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
+        @media (max-width: 576px) {
+            display: block;
+        }
     }
 
     &__item-chevron {
+        @media (max-width: 992px) {
+            display: none;
+        }
+
+        @media (max-width: 576px) {
+            display: block;
+        }
     }
 }
