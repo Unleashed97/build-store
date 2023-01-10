@@ -4,4 +4,5 @@ customFunctions.sidebarToggle()
 customFunctions.handleEmployeeModal()
 customFunctions.handleGoodModal()
 customFunctions.handleOrderModal()
+customFunctions.handleNav()
 // vendors

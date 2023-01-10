@@ -10,7 +10,7 @@ export const sidebarNavToggleList = () => {
                 '.nav__sublist-wrapper',
             )
 
-            subListWrapper.classList.toggle('active')
+            subListWrapper && subListWrapper.classList.toggle('active')
         }),
     )
 }
@@ -101,4 +101,17 @@ export const handleOrderModal = () => {
             }
         })
     }
+}
+
+export const handleNav = () => {
+    const currentLocation = location.href
+
+    const navLinkList = document.querySelectorAll('.nav__link')
+
+    navLinkList.forEach((navLink) => {
+        if (currentLocation === navLink.href) {
+            navLinkList.forEach((navLink) => navLink.classList.remove('active'))
+            navLink.classList.add('active')
+        }
+    })
 }

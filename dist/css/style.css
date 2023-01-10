@@ -503,6 +503,18 @@ p {
 .nav__sublist .nav__link {
   padding: 4px 0 4px 53px;
 }
+@media (max-width: 992px) {
+  .nav__sublist .nav__link {
+    padding-left: 4px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 576px) {
+  .nav__sublist .nav__link {
+    padding-left: 53px;
+    font-size: 1.4rem;
+  }
+}
 .nav__link, .nav__btn {
   padding: 15px 19px 15px 16px;
   display: flex;
