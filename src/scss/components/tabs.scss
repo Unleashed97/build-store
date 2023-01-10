@@ -1,5 +1,5 @@
 .tabs {
-    height: 53px;
+    min-height: 53px;
     padding-bottom: 15px;
     margin-bottom: 20px;
 
@@ -7,6 +7,7 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         gap: 4px;
     }
 
