@@ -16,6 +16,7 @@
 
     @media (max-width: 576px) {
         position: absolute;
+        z-index: 5;
 
         transform: translate(-110%);
 

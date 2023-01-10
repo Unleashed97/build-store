@@ -122,6 +122,12 @@
     }
 
     &--profile-form {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
         .section__title {
             margin-bottom: 11px;
 
@@ -134,6 +140,14 @@
         }
 
         .section__content {
+        }
+    }
+
+    &--profile-form-password {
+        display: none;
+
+        &.active {
+            display: block;
         }
     }
 

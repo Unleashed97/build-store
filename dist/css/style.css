@@ -436,6 +436,7 @@ p {
 @media (max-width: 576px) {
   .sidebar {
     position: absolute;
+    z-index: 5;
     transform: translate(-110%);
     width: 256px;
     transition: 0.3s linear;
@@ -673,6 +674,12 @@ p {
     grid-template-columns: 1fr;
   }
 }
+.section--profile-form {
+  display: none;
+}
+.section--profile-form.active {
+  display: block;
+}
 .section--profile-form .section__title {
   margin-bottom: 11px;
   font-family: "Inter", sans-serif;
@@ -681,6 +688,12 @@ p {
   line-height: 1.44;
   letter-spacing: 0.03em;
   color: #000;
+}
+.section--profile-form-password {
+  display: none;
+}
+.section--profile-form-password.active {
+  display: block;
 }
 .section--good-main .section__title {
   margin-bottom: 20px;
@@ -948,32 +961,32 @@ p {
     width: 100%;
   }
 }
-.form--profile {
+.form--profile, .form--profile-password {
   display: flex;
   gap: 30px;
 }
 @media (max-width: 576px) {
-  .form--profile {
+  .form--profile, .form--profile-password {
     flex-direction: column;
   }
 }
-.form--profile .form__group {
+.form--profile .form__group, .form--profile-password .form__group {
   display: flex;
   gap: 32px;
   margin-bottom: 21px;
 }
-.form--profile .form__group:last-child {
+.form--profile .form__group:last-child, .form--profile-password .form__group:last-child {
   margin-bottom: 0;
 }
-.form--profile .form__group--lg {
+.form--profile .form__group--lg, .form--profile-password .form__group--lg {
   width: 100%;
 }
 @media (max-width: 992px) {
-  .form--profile .form__group {
+  .form--profile .form__group, .form--profile-password .form__group {
     flex-direction: column;
   }
 }
-.form--profile .form__input {
+.form--profile .form__input, .form--profile-password .form__input {
   max-width: 240px;
   width: 100%;
   padding: 14px 0;
@@ -986,16 +999,16 @@ p {
   border-bottom: 1px solid #d4d6d7;
 }
 @media (max-width: 576px) {
-  .form--profile .form__input {
+  .form--profile .form__input, .form--profile-password .form__input {
     max-width: 100%;
   }
 }
-.form--profile .form__file-block {
+.form--profile .form__file-block, .form--profile-password .form__file-block {
   position: relative;
   font-size: 1.4rem;
   color: #ff7d1f;
 }
-.form--profile .form__input-file {
+.form--profile .form__input-file, .form--profile-password .form__input-file {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -1005,7 +1018,7 @@ p {
   font-size: 0;
   cursor: pointer;
 }
-.form--profile .form__label {
+.form--profile .form__label, .form--profile-password .form__label {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -1013,6 +1026,16 @@ p {
   font-weight: 300;
   color: #767d81;
   font-size: 1.4rem;
+}
+.form--profile-password .profile__text-block {
+  width: 100%;
+}
+.form--profile-password .form__label {
+  width: 100%;
+}
+.form--profile-password .form__input {
+  max-width: 100% !important;
+  width: 100%;
 }
 .form--good {
   max-width: 771px;
@@ -1397,6 +1420,7 @@ p {
 .modal--profile .modal__inner {
   position: relative;
   max-width: 771px;
+  width: 100%;
   min-height: 625px;
   padding: 25px 30px 30px;
   background-color: #fff;
@@ -1422,6 +1446,9 @@ p {
   right: 30px;
   bottom: 30px;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .modal--profile .modal__footer .btn {
   padding: 12px 67px;

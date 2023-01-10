@@ -31,6 +31,30 @@ export const sidebarToggle = () => {
 
 export const handleEmployeeModal = () => {
     const modal = document.querySelector('.modal--profile')
+    const modalNextStepBtn = document.querySelector('.modal__next-step-btn')
+    const modalBackBtn = document.querySelector('.modal__back-btn')
+    const modalCompleteBtn = document.querySelector('.modal__complete-btn')
+
+    const sectionPassword = document.querySelector(
+        '.section--profile-form-password',
+    )
+    const sectionProfileForm = document.querySelector('.section--profile-form')
+
+    modalNextStepBtn.addEventListener('click', () => {
+        sectionPassword.classList.add('active')
+        sectionProfileForm.classList.remove('active')
+    })
+
+    modalBackBtn.addEventListener('click', () => {
+        sectionPassword.classList.remove('active')
+        sectionProfileForm.classList.add('active')
+    })
+
+    modalCompleteBtn.addEventListener('click', () => {
+        modal.classList.remove('active')
+        sectionPassword.classList.remove('active')
+        sectionProfileForm.classList.add('active')
+    })
 
     if (modal) {
         const modalOpenBtn = document.querySelector(
